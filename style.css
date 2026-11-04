@@ -504,7 +504,7 @@ footer p {
 
 .site-logo {
     display: block;
-    width: 350px;
+    width: 380px;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
@@ -512,6 +512,150 @@ footer p {
 
 @media (max-width: 768px) {
     .site-logo {
-        width: 220px;
+        width: 300px;
+    }
+}
+/* ========================================
+   THE VAULT - EXCLUSIVE COLLECTION
+======================================== */
+
+/* ===== VAULT PAGE ===== */
+
+.vault-page {
+    background-color: #102820;
+    color: #F7F3EF;
+}
+
+/* ===== VAULT HEADER ===== */
+
+.vault-page header {
+    background-color: #F7F3EF;
+}
+
+/* ===== MAIN VAULT SECTION ===== */
+
+#vault {
+    min-height: 550px;
+    padding: 85px 25px 100px;
+    text-align: center;
+    background:
+        radial-gradient(
+            ellipse at center,
+            #214638 0%,
+            #102820 65%,
+            #091A14 100%
+        );
+}
+
+/* ===== EXCLUSIVE LABEL ===== */
+
+.vault-eyebrow {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #D6BB83;
+    margin-bottom: 35px;
+}
+
+/* ===== DECORATIVE SYMBOL ===== */
+
+.vault-symbol {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
+    color: #D6BB83;
+    margin-bottom: 15px;
+}
+
+/* ===== VAULT TITLE ===== */
+
+#vault h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 400;
+    letter-spacing: 12px;
+    margin: 0 0 20px;
+    color: #F7F3EF;
+}
+
+/* ===== TAGLINE ===== */
+
+.vault-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-style: italic;
+    color: #D6BB83;
+    margin-bottom: 35px;
+}
+
+/* ===== GOLD DIVIDER ===== */
+
+.vault-divider {
+    width: 90px;
+    height: 1px;
+    background-color: #B69A62;
+    margin: 0 auto 35px;
+}
+
+/* ===== DESCRIPTION ===== */
+
+.vault-description {
+    max-width: 540px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+    line-height: 2;
+    color: #E5E0D8;
+}
+
+/* ===== COMING SOON ===== */
+
+.vault-coming-soon {
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: #D6BB83;
+    margin: 25px 0 35px;
+}
+
+/* ===== RETURN BUTTON ===== */
+
+.vault-back-button {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 1px solid #B69A62;
+    color: #F7F3EF;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.vault-back-button:hover {
+    background-color: #B69A62;
+    color: #102820;
+}
+
+/* ===== MOBILE VAULT STYLING ===== */
+
+@media (max-width: 768px) {
+
+    #vault {
+        min-height: auto;
+        padding: 65px 20px 80px;
+    }
+
+    #vault h1 {
+        font-size: 44px;
+        letter-spacing: 6px;
+    }
+
+    .vault-tagline {
+        font-size: 24px;
+    }
+
+    .vault-eyebrow {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .vault-description {
+        font-size: 13px;
     }
 }
