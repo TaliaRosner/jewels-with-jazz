@@ -1,0 +1,517 @@
+/* ========================================
+   JEWELS WITH JAZZ - STYLESHEET
+======================================== */
+
+/* ===== FONTS ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500&family=Italianno&display=swap');
+
+
+/* ===== COLOR PALETTE ===== */
+
+:root {
+    --ivory: #F7F3EF;
+    --soft-beige: #EDE8E3;
+    --gold: #B69A62;
+    --emerald: #176B50;
+    --sapphire: #243F85;
+    --ruby: #A51C50;
+    --amethyst: #9874B8;
+    --charcoal: #252323;
+}
+
+
+/* ===== GLOBAL STYLES ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--ivory);
+    color: var(--charcoal);
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+}
+
+h1 {
+    letter-spacing: 8px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+
+/* ===== HEADER & NAVIGATION ===== */
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 1px solid var(--gold);
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--charcoal);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--emerald);
+}
+
+
+/* ===== HOMEPAGE HERO SECTION ===== */
+
+#home {
+    text-align: center;
+    padding: 120px 20px;
+    background-color: var(--ivory);
+}
+
+#home h2 {
+    font-size: 64px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+/* Hero Inquiry Button */
+
+#home a {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--emerald);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+#home a:hover {
+    background-color: var(--gold);
+}
+
+
+/* ===== PORTFOLIO SECTION ===== */
+
+#portfolio {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: var(--soft-beige);
+}
+
+#portfolio h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#portfolio p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* ===== PORTFOLIO GALLERY ===== */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.03);
+}
+
+.portfolio-item h3 {
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+}
+/* ===== MEET JAZZ SECTION ===== */
+
+#about {
+    padding: 100px 40px;
+    background-color: var(--ivory);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+.about-text h2 {
+    font-size: 52px;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 768px) {
+    #about {
+        padding: 60px 20px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-image img {
+        height: auto;
+    }
+}
+
+/* ===== INQUIRY SECTION ===== */
+
+#inquire {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: var(--soft-beige);
+}
+
+#inquire h2 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+#inquire p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.inquiry-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: var(--emerald);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.inquiry-button:hover {
+    background-color: var(--gold);
+}
+
+#inquire .inquiry-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--charcoal);
+    color: var(--ivory);
+}
+
+footer p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    #home {
+        padding: 80px 20px;
+    }
+
+    #home h2 {
+        font-size: 42px;
+    }
+
+    #portfolio h2,
+    #about h2,
+    #inquire h2 {
+        font-size: 38px;
+    }
+}
+
+/* ========================================
+   CUSTOM INQUIRY PAGE
+======================================== */
+
+/* ===== PAGE LAYOUT ===== */
+
+#custom-inquiry {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 80px 25px 100px;
+}
+
+#custom-inquiry h2 {
+    font-size: 52px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#custom-inquiry > p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+/* ===== FORM SECTIONS ===== */
+
+#jewelry-inquiry-form fieldset {
+    border: none;
+    border-top: 1px solid var(--gold);
+    padding: 35px 0;
+    margin: 0 0 20px;
+}
+
+#jewelry-inquiry-form legend {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    padding-right: 20px;
+    color: var(--charcoal);
+}
+
+/* ===== FORM LABELS ===== */
+
+#jewelry-inquiry-form label {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin: 25px 0 10px;
+}
+
+/* ===== INPUT FIELDS ===== */
+
+#jewelry-inquiry-form input,
+#jewelry-inquiry-form select,
+#jewelry-inquiry-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #D8D0C8;
+    background-color: #FFFFFF;
+    color: var(--charcoal);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+/* ===== INPUT FOCUS EFFECT ===== */
+
+#jewelry-inquiry-form input:focus,
+#jewelry-inquiry-form select:focus,
+#jewelry-inquiry-form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 1px var(--gold);
+}
+
+/* ===== TEXTAREA ===== */
+
+#jewelry-inquiry-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+
+#jewelry-inquiry-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 18px 30px;
+    margin-top: 20px;
+    border: none;
+    background-color: var(--emerald);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#jewelry-inquiry-form button[type="submit"]:hover {
+    background-color: var(--gold);
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+@media (max-width: 768px) {
+    #custom-inquiry {
+        padding: 60px 20px;
+    }
+
+    #custom-inquiry h2 {
+        font-size: 38px;
+    }
+
+    #jewelry-inquiry-form legend {
+        font-size: 26px;
+    }
+}
+/* ========================================
+   INQUIRY FORM - ADDITIONAL STYLING
+======================================== */
+
+/* ===== HELPER TEXT ===== */
+
+.form-helper-text {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #777;
+    margin: 10px 0 20px;
+}
+
+/* ===== ESTIMATE DISCLAIMER ===== */
+
+.estimate-disclaimer {
+    background-color: var(--soft-beige);
+    border-left: 3px solid var(--gold);
+    padding: 20px 25px;
+    margin: 20px 0 35px;
+}
+
+.estimate-disclaimer p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--charcoal);
+    margin: 0 0 10px;
+}
+
+.estimate-disclaimer p:last-child {
+    margin-bottom: 0;
+}
+
+.estimate-disclaimer strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* ===== FILE UPLOAD FIELD ===== */
+
+#inspiration-photos {
+    padding: 15px;
+    background-color: var(--ivory);
+    border: 1px dashed var(--gold);
+    cursor: pointer;
+}
+
+#inspiration-photos::file-selector-button {
+    background-color: var(--soft-beige);
+    border: 1px solid var(--gold);
+    padding: 10px 15px;
+    margin-right: 15px;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+}
+
+/* ===== HIDDEN CONDITIONAL FIELDS ===== */
+
+.conditional-field[hidden] {
+    display: none;
+}
+/* ===== WEBSITE LOGO ===== */
+
+.logo-link {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.site-logo {
+    display: block;
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .site-logo {
+        width: 220px;
+    }
+}

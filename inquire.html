@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Custom Jewelry Inquiry | Jewels With Jazz</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
+    <header>
+      <a href="index.html" class="logo-link">
+        <img
+          src="images/jewels-with-jazz-logo.png"
+          alt="Jewels With Jazz"
+          class="site-logo"
+        />
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#about">Our Story</a>
+        <a href="inquire.html">Inquire</a>
+      </nav>
+    </header>
+
+    <!-- ===== INQUIRY PAGE ===== -->
+    <main>
+      <section id="custom-inquiry">
+        <h2>Let's Create Something Beautiful</h2>
+
+        <p>
+          Every extraordinary piece begins with an idea. Tell us what you're
+          dreaming of.
+        </p>
+
+        <!-- ===== CUSTOM JEWELRY INQUIRY FORM ===== -->
+        <form id="jewelry-inquiry-form" enctype="multipart/form-data">
+          <!-- ===== SECTION 1: CONTACT INFORMATION ===== -->
+          <fieldset>
+            <legend>01. Let's Get Acquainted</legend>
+
+            <label for="customer-name">Full Name *</label>
+            <input
+              type="text"
+              id="customer-name"
+              name="customerName"
+              autocomplete="name"
+              required
+            />
+
+            <label for="customer-email">Email Address *</label>
+            <input
+              type="email"
+              id="customer-email"
+              name="customerEmail"
+              autocomplete="email"
+              required
+            />
+
+            <label for="customer-phone">Phone Number (Optional)</label>
+            <input
+              type="tel"
+              id="customer-phone"
+              name="customerPhone"
+              autocomplete="tel"
+            />
+          </fieldset>
+
+          <!-- ===== SECTION 2: JEWELRY TYPE ===== -->
+          <fieldset>
+            <legend>02. Tell Us About Your Vision</legend>
+
+            <label for="jewelry-type">
+              What are you looking to create? *
+            </label>
+
+            <select id="jewelry-type" name="jewelryType" required>
+              <option value="">Select Jewelry Type</option>
+              <option value="ring">Ring</option>
+              <option value="necklace">Necklace / Pendant</option>
+              <option value="earrings">Earrings</option>
+              <option value="bracelet">Bracelet</option>
+              <option value="redesign">Heirloom Redesign</option>
+              <option value="other">Something Else</option>
+            </select>
+
+            <!-- ===== CONDITIONAL JEWELRY QUESTIONS ===== -->
+
+            <!-- RING OPTIONS -->
+            <div id="ring-options" class="conditional-field" hidden>
+              <label for="ring-size">Ring Size *</label>
+
+              <select id="ring-size" name="ringSize" disabled>
+                <option value="">Select Ring Size</option>
+                <option value="unknown">I'm Not Sure</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- NECKLACE OPTIONS -->
+            <div id="necklace-options" class="conditional-field" hidden>
+              <label for="necklace-length"> Preferred Necklace Length </label>
+
+              <select id="necklace-length" name="necklaceLength" disabled>
+                <option value="">Not Sure Yet</option>
+                <option value="16">16 inches</option>
+                <option value="18">18 inches</option>
+                <option value="20">20 inches</option>
+                <option value="24">24 inches</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- EARRING OPTIONS -->
+            <div id="earring-options" class="conditional-field" hidden>
+              <label for="earring-style"> Preferred Earring Style </label>
+
+              <select id="earring-style" name="earringStyle" disabled>
+                <option value="">Not Sure Yet</option>
+                <option value="studs">Studs</option>
+                <option value="hoops">Hoops</option>
+                <option value="drops">Drop Earrings</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <!-- ===== SECTION 3: DESIGN PREFERENCES ===== -->
+          <fieldset>
+            <legend>03. The Details</legend>
+
+            <!-- METAL PREFERENCE -->
+            <label for="metal-type">Preferred Metal</label>
+
+            <select id="metal-type" name="metalType">
+              <option value="">Not Sure Yet</option>
+              <option value="yellow-gold">Yellow Gold</option>
+              <option value="white-gold">White Gold</option>
+              <option value="rose-gold">Rose Gold</option>
+              <option value="platinum">Platinum</option>
+              <option value="other">Other</option>
+            </select>
+
+            <!-- GEMSTONE PREFERENCE -->
+            <label for="gemstone-type"> Preferred Gemstone </label>
+
+            <select id="gemstone-type" name="gemstoneType">
+              <option value="">Not Sure Yet</option>
+              <option value="diamond">Diamond</option>
+              <option value="lab-diamond">Lab-Grown Diamond</option>
+              <option value="emerald">Emerald</option>
+              <option value="sapphire">Sapphire</option>
+              <option value="ruby">Ruby</option>
+              <option value="amethyst">Amethyst</option>
+              <option value="other">Other</option>
+              <option value="none">No Gemstone</option>
+            </select>
+
+            <!-- CUSTOMER-SUPPLIED STONES -->
+            <label for="customer-stones">
+              Will you be providing your own gemstone(s)?
+            </label>
+
+            <select id="customer-stones" name="customerStones">
+              <option value="">Not Sure Yet</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+
+            <!-- DESIGN DESCRIPTION -->
+            <label for="design-description">
+              Tell Us More About Your Dream Piece *
+            </label>
+
+            <textarea
+              id="design-description"
+              name="designDescription"
+              rows="5"
+              placeholder="Tell us about your ideas, inspiration, or anything you'd love us to know..."
+              required
+            ></textarea>
+          </fieldset>
+
+          <!-- ===== SECTION 4: INSPIRATION PHOTOS ===== -->
+          <fieldset>
+            <legend>04. Your Inspiration</legend>
+
+            <p class="form-helper-text">
+              Have a design in mind? Upload photos, sketches, or inspiration
+              images to help us understand your vision.
+            </p>
+
+            <label for="inspiration-photos">
+              Upload Inspiration Photos (Optional)
+            </label>
+
+            <input
+              type="file"
+              id="inspiration-photos"
+              name="inspirationPhotos"
+              accept=".jpg,.jpeg,.png,.webp"
+              multiple
+            />
+
+            <p class="form-helper-text">
+              Accepted formats: JPG, PNG, and WEBP. Maximum 5 images, 5 MB each.
+            </p>
+          </fieldset>
+
+          <!-- ===== SECTION 5: BUDGET & TIMELINE ===== -->
+          <fieldset>
+            <legend>05. A Few Final Details</legend>
+
+            <!-- BUDGET -->
+            <label for="budget-range"> Approximate Budget (Optional) </label>
+
+            <select id="budget-range" name="budgetRange">
+              <option value="">Prefer Not to Say / Not Sure</option>
+              <option value="under-500">Under $500</option>
+              <option value="500-1000">$500 - $1,000</option>
+              <option value="1000-2500">$1,000 - $2,500</option>
+              <option value="2500-5000">$2,500 - $5,000</option>
+              <option value="5000-10000">$5,000 - $10,000</option>
+              <option value="10000-plus">$10,000+</option>
+            </select>
+
+            <p class="form-helper-text">
+              Why we ask: Knowing your approximate budget helps us recommend
+              materials and design options that align with your vision.
+            </p>
+
+            <!-- TIMELINE -->
+            <label for="project-timeline">
+              When would you ideally like your piece?
+            </label>
+
+            <select id="project-timeline" name="projectTimeline">
+              <option value="">No Specific Timeline</option>
+              <option value="1-month">Within 1 Month</option>
+              <option value="1-3-months">1 - 3 Months</option>
+              <option value="3-6-months">3 - 6 Months</option>
+              <option value="flexible">I'm Flexible</option>
+            </select>
+
+            <!-- ADDITIONAL NOTES -->
+            <label for="additional-notes">
+              Anything Else We Should Know? (Optional)
+            </label>
+
+            <textarea
+              id="additional-notes"
+              name="additionalNotes"
+              rows="4"
+              placeholder="Special occasions, meaningful details, questions, or anything else..."
+            ></textarea>
+          </fieldset>
+
+          <!-- ===== ESTIMATE DISCLAIMER ===== -->
+          <div class="estimate-disclaimer">
+            <p>
+              <strong>A Note About Estimates</strong>
+            </p>
+
+            <p>
+              All inquiries are reviewed individually. Any pricing discussed is
+              preliminary and may change based on materials, gemstone
+              availability, design specifications, and other factors. Final
+              pricing will be confirmed before proceeding.
+            </p>
+          </div>
+
+          <!-- ===== SUBMIT BUTTON ===== -->
+          <button type="submit">Submit My Inquiry</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p>&copy; 2026 Jewels With Jazz</p>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="script.js"></script>
+  </body>
+</html>
