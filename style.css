@@ -83,52 +83,85 @@ nav a:hover {
 }
 
 
-/* ===== HOMEPAGE HERO SECTION ===== */
+/* ===== HOMEPAGE HERO: SPLIT EDITORIAL LAYOUT ===== */
 
 #home {
-    text-align: center;
-    padding: 35px 20px 55px;
     background-color: var(--ivory);
+    padding: 55px 32px 70px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    gap: clamp(35px, 5vw, 85px);
+    align-items: center;
+}
+
+.hero-content {
+    text-align: left;
 }
 
 .hero-diamond {
-    color: #B69A62;
+    color: var(--gold);
     font-size: 28px;
-    margin-bottom: 0;
     line-height: 1;
+    margin-bottom: 16px;
 }
 
-#home h2 {
-    font-size: 64px;
+#home h1 {
+    font-size: clamp(48px, 5vw, 76px);
     font-weight: 400;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    line-height: 1.08;
+    letter-spacing: 0;
+    margin: 0 0 22px;
 }
 
 #home p {
     font-size: 20px;
     letter-spacing: 1px;
-    margin-bottom: 35px;
+    line-height: 1.6;
+    margin: 0 0 35px;
 }
 
-/* Hero Inquiry Button */
-
-#home a {
+#home .hero-button {
     display: inline-block;
-    padding: 15px 35px;
+    padding: 16px 35px;
     background-color: var(--emerald);
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 12px;
+    font-weight: 500;
     transition: background-color 0.3s ease;
 }
 
-#home a:hover {
+#home .hero-button:hover {
     background-color: var(--gold);
 }
 
+.hero-image {
+    position: relative;
+    min-width: 0;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    inset: 16px -12px -16px 12px;
+    border: 1px solid var(--gold);
+    pointer-events: none;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: clamp(380px, 39vw, 530px);
+    object-fit: cover;
+    background-color: var(--soft-beige);
+}
 
 /* ===== PORTFOLIO SECTION ===== */
 
@@ -308,11 +341,30 @@ footer p {
     }
 
     #home {
-    padding: 30px 20px 45px;
+        padding: 45px 22px 65px;
     }
 
-    #home h2 {
-        font-size: 42px;
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        max-width: 560px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    #home h1 {
+        font-size: clamp(42px, 9vw, 58px);
+    }
+
+    #home p {
+        font-size: 17px;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-image img {
+        height: 390px;
     }
 
     #portfolio h2,
@@ -668,4 +720,13 @@ footer p {
     .vault-description {
         font-size: 13px;
     }
+}
+/* ===== SMALL SCREEN FINISHING TOUCHES ===== */
+
+@media (max-width: 480px) {
+    #home { padding: 35px 20px 55px; }
+    .hero-image img { height: 310px; }
+    .hero-image::before { inset: 10px -7px -10px 7px; }
+    nav { gap: 12px; }
+    nav a { font-size: 11px; letter-spacing: 1px; }
 }
