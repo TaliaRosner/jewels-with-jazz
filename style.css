@@ -317,7 +317,7 @@ nav a:hover {
 
 footer {
     text-align: center;
-    padding: 30px 20px;
+    padding: 45px 20px;
     background-color: var(--charcoal);
     color: var(--ivory);
 }
@@ -327,6 +327,45 @@ footer p {
     letter-spacing: 1px;
     margin: 0;
 }
+
+footer > p {
+    margin-top: 25px;
+}
+
+/* ===== FOOTER SOCIAL LINKS ===== */
+
+.footer-socials {
+    margin-bottom: 25px;
+}
+
+.footer-socials p {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 18px;
+    color: var(--ivory);
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.footer-socials i {
+    font-size: 24px;
+}
+
+.footer-socials a:hover {
+    color: var(--gold);
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 
 @media (max-width: 768px) {
