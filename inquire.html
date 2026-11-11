@@ -1,92 +1,85 @@
 <!doctype html>
+
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Custom Jewelry Inquiry | Jewels With Jazz</title>
-
-    <link rel="stylesheet" href="style.css" />
+    <link href="style.css" rel="stylesheet" />
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
     />
   </head>
-
   <body>
     <!-- ===== HEADER & NAVIGATION ===== -->
     <header>
-      <a href="index.html" class="logo-link">
+      <a class="logo-link" href="index.html">
         <img
-          src="images/jewels-with-jazz-logo-transparent.png"
           alt="Jewels With Jazz"
           class="site-logo"
+          src="images/jewels-with-jazz-logo-transparent.png"
         />
       </a>
-
       <nav>
         <a href="index.html#home">Home</a>
         <a href="index.html#portfolio">Portfolio</a>
         <a href="process.html">Our Process</a>
         <a href="vault.html">The Vault</a>
-        <a href="inquire.html" class="nav-inquire active">Inquire</a>
+        <a class="nav-inquire active" href="inquire.html">Inquire</a>
       </nav>
     </header>
-
     <!-- ===== INQUIRY PAGE ===== -->
     <main>
       <section id="custom-inquiry">
         <h2>Let's Create Something Beautiful</h2>
-
         <p>
           Every extraordinary piece begins with an idea. Tell us what you're
           dreaming of.
         </p>
-
         <!-- ===== CUSTOM JEWELRY INQUIRY FORM ===== -->
-        <form id="jewelry-inquiry-form" enctype="multipart/form-data">
+        <form
+          enctype="multipart/form-data"
+          id="jewelry-inquiry-form"
+          novalidate
+        >
+          <div aria-label="Inquiry progress" class="form-progress">
+            <div class="form-progress-top">
+              <span id="form-step-count">Step 1 of 4</span
+              ><span id="form-step-name">Your Vision</span>
+            </div>
+            <div
+              aria-label="Form completion"
+              aria-valuemax="4"
+              aria-valuemin="1"
+              aria-valuenow="1"
+              class="form-progress-track"
+              role="progressbar"
+            >
+              <div id="form-progress-fill"></div>
+            </div>
+          </div>
           <!-- ===== SECTION 1: CONTACT INFORMATION ===== -->
-          <fieldset>
-            <legend>01. Let's Get Acquainted</legend>
-
-            <label for="customer-name">Full Name *</label>
-            <input
-              type="text"
-              id="customer-name"
-              name="customerName"
-              autocomplete="name"
-              required
-            />
-
-            <label for="customer-phone">Phone Number *</label>
-            <input
-              type="tel"
-              id="customer-phone"
-              name="customerPhone"
-              autocomplete="tel"
-              required
-            />
-
-            <label for="customer-email">Email Address *</label>
-            <input
-              type="email"
-              id="customer-email"
-              name="customerEmail"
-              autocomplete="email"
-              required
-            />
-          </fieldset>
 
           <!-- ===== SECTION 2: JEWELRY TYPE ===== -->
-          <fieldset>
-            <legend>02. Tell Us About Your Vision</legend>
 
+          <!-- ===== SECTION 3: DESIGN PREFERENCES ===== -->
+
+          <!-- ===== SECTION 4: INSPIRATION PHOTOS ===== -->
+
+          <!-- ===== SECTION 5: BUDGET & TIMELINE ===== -->
+
+          <!-- ===== ESTIMATE & TIMELINE DISCLAIMERS ===== -->
+
+          <!-- ===== SUBMIT BUTTON ===== -->
+
+          <fieldset class="form-step">
+            <legend>01. Your Vision</legend>
             <label for="jewelry-type">
               What are you looking to create? *
             </label>
-
-            <select id="jewelry-type" name="jewelryType" required>
-              <option value="" disabled selected>Select</option>
+            <select id="jewelry-type" name="jewelryType" required="">
+              <option disabled="" selected="" value="">Select</option>
               <option value="ring">Ring</option>
               <option value="necklace">Necklace / Pendant</option>
               <option value="earrings">Earrings</option>
@@ -94,26 +87,26 @@
               <option value="redesign">Heirloom Redesign</option>
               <option value="other">Other</option>
             </select>
-
-            <div id="other-jewelry-type-field" class="conditional-field" hidden>
+            <div
+              class="conditional-field"
+              hidden=""
+              id="other-jewelry-type-field"
+            >
               <label for="other-jewelry-type"
                 >Please specify the jewelry type *</label
               >
               <input
-                type="text"
                 id="other-jewelry-type"
                 name="otherJewelryType"
+                type="text"
               />
             </div>
-
             <!-- ===== CONDITIONAL JEWELRY QUESTIONS ===== -->
-
             <!-- RING OPTIONS -->
-            <div id="ring-options" class="conditional-field" hidden>
+            <div class="conditional-field" hidden="" id="ring-options">
               <label for="ring-size">Ring Size *</label>
-
-              <select id="ring-size" name="ringSize" disabled>
-                <option value="" disabled selected>Select</option>
+              <select disabled="" id="ring-size" name="ringSize">
+                <option disabled="" selected="" value="">Select</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
@@ -127,20 +120,17 @@
                 <option value="other">Other</option>
               </select>
             </div>
-
-            <div id="other-ring-size-field" class="conditional-field" hidden>
+            <div class="conditional-field" hidden="" id="other-ring-size-field">
               <label for="other-ring-size"
                 >Please specify your ring size *</label
               >
-              <input type="text" id="other-ring-size" name="otherRingSize" />
+              <input id="other-ring-size" name="otherRingSize" type="text" />
             </div>
-
             <!-- NECKLACE OPTIONS -->
-            <div id="necklace-options" class="conditional-field" hidden>
+            <div class="conditional-field" hidden="" id="necklace-options">
               <label for="necklace-length"> Preferred Necklace Length </label>
-
-              <select id="necklace-length" name="necklaceLength" disabled>
-                <option value="" disabled selected>Select</option>
+              <select disabled="" id="necklace-length" name="necklaceLength">
+                <option disabled="" selected="" value="">Select</option>
                 <option value="16">16 inches</option>
                 <option value="18">18 inches</option>
                 <option value="20">20 inches</option>
@@ -149,27 +139,25 @@
                 <option value="undecided">Undecided</option>
               </select>
               <div
-                id="other-necklace-length-field"
                 class="conditional-field"
-                hidden
+                hidden=""
+                id="other-necklace-length-field"
               >
                 <label for="other-necklace-length"
                   >Please specify the necklace length *</label
                 >
                 <input
-                  type="text"
                   id="other-necklace-length"
                   name="otherNecklaceLength"
+                  type="text"
                 />
               </div>
             </div>
-
             <!-- EARRING OPTIONS -->
-            <div id="earring-options" class="conditional-field" hidden>
+            <div class="conditional-field" hidden="" id="earring-options">
               <label for="earring-style"> Preferred Earring Style </label>
-
-              <select id="earring-style" name="earringStyle" disabled>
-                <option value="" disabled selected>Select</option>
+              <select disabled="" id="earring-style" name="earringStyle">
+                <option disabled="" selected="" value="">Select</option>
                 <option value="studs">Studs</option>
                 <option value="hoops">Hoops</option>
                 <option value="drops">Drop Earrings</option>
@@ -177,49 +165,46 @@
                 <option value="undecided">Undecided</option>
               </select>
               <div
-                id="other-earring-style-field"
                 class="conditional-field"
-                hidden
+                hidden=""
+                id="other-earring-style-field"
               >
                 <label for="other-earring-style"
                   >Please specify the earring style *</label
                 >
                 <input
-                  type="text"
                   id="other-earring-style"
                   name="otherEarringStyle"
+                  type="text"
                 />
               </div>
             </div>
-
             <!-- Bracelet Options -->
-            <div id="bracelet-options" class="conditional-field" hidden>
+            <div class="conditional-field" hidden="" id="bracelet-options">
               <label for="bracelet-style">Bracelet Style</label>
               <select id="bracelet-style" name="braceletStyle">
-                <option value="" disabled selected>Select</option>
+                <option disabled="" selected="" value="">Select</option>
                 <option value="bangle">Bangle</option>
                 <option value="chain">Chain Bracelet</option>
                 <option value="tennis">Tennis Bracelet</option>
                 <option value="charm">Charm Bracelet</option>
                 <option value="other">Other</option>
               </select>
-
               <div
-                id="other-bracelet-style-field"
                 class="conditional-field"
-                hidden
+                hidden=""
+                id="other-bracelet-style-field"
               >
                 <label for="other-bracelet-style">Please specify *</label>
                 <input
-                  type="text"
                   id="other-bracelet-style"
                   name="otherBraceletStyle"
+                  type="text"
                 />
               </div>
-
               <label for="bracelet-size">Wrist Size / Bracelet Length</label>
               <select id="bracelet-size" name="braceletSize">
-                <option value="" disabled selected>Select</option>
+                <option disabled="" selected="" value="">Select</option>
                 <option value="6">6 inches</option>
                 <option value="6.5">6.5 inches</option>
                 <option value="7">7 inches</option>
@@ -228,294 +213,305 @@
                 <option value="undecided">Undecided</option>
                 <option value="other">Other</option>
               </select>
-
               <div
-                id="other-bracelet-size-field"
                 class="conditional-field"
-                hidden
+                hidden=""
+                id="other-bracelet-size-field"
               >
                 <label for="other-bracelet-size"
                   >Please specify your size *</label
                 >
                 <input
-                  type="text"
                   id="other-bracelet-size"
                   name="otherBraceletSize"
+                  type="text"
                 />
               </div>
             </div>
-
             <!-- Heirloom Redesign Options -->
-            <div id="redesign-options" class="conditional-field" hidden>
+            <div class="conditional-field" hidden="" id="redesign-options">
               <label for="redesign-piece">What are you redesigning?</label>
               <select id="redesign-piece" name="redesignPiece">
-                <option value="" disabled selected>Select</option>
+                <option disabled="" selected="" value="">Select</option>
                 <option value="ring">Ring</option>
                 <option value="necklace">Necklace / Pendant</option>
                 <option value="earrings">Earrings</option>
                 <option value="bracelet">Bracelet</option>
                 <option value="other">Other</option>
               </select>
-
               <label for="redesign-details"
                 >What would you like to change?</label
               >
               <textarea
                 id="redesign-details"
                 name="redesignDetails"
-                rows="3"
                 placeholder="Tell us about your vision..."
+                rows="3"
               ></textarea>
             </div>
           </fieldset>
-
-          <!-- ===== SECTION 3: DESIGN PREFERENCES ===== -->
-          <fieldset>
-            <legend>03. The Details</legend>
-
+          <fieldset class="form-step" hidden="">
+            <legend>02. The Details</legend>
+            <div class="form-two-columns">
+              <div class="form-column">
+                <label for="metal-type">Preferred Metal *</label
+                ><select id="metal-type" name="metalType" required="">
+                  <option disabled="" selected="" value="">Select</option>
+                  <option value="yellow-gold">Yellow Gold</option>
+                  <option value="white-gold">White Gold</option>
+                  <option value="rose-gold">Rose Gold</option>
+                  <option value="platinum">Platinum</option>
+                  <option value="undecided">Undecided</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-column">
+                <label for="gemstone-type"> Preferred Gemstone </label
+                ><select id="gemstone-type" name="gemstoneType">
+                  <option disabled="" selected="" value="">Select</option>
+                  <option value="natural-diamond">Natural Diamond</option>
+                  <option value="lab-grown-diamond">Lab-Grown Diamond</option>
+                  <option value="precious-semiprecious">
+                    Precious or Semiprecious Gemstone
+                  </option>
+                  <option value="undecided">Undecided</option>
+                </select>
+              </div>
+            </div>
             <!-- METAL PREFERENCE -->
-            <label for="metal-type">Preferred Metal *</label>
 
-            <select id="metal-type" name="metalType" required>
-              <option value="" disabled selected>Select</option>
-              <option value="yellow-gold">Yellow Gold</option>
-              <option value="white-gold">White Gold</option>
-              <option value="rose-gold">Rose Gold</option>
-              <option value="platinum">Platinum</option>
-              <option value="undecided">Undecided</option>
-              <option value="other">Other</option>
-            </select>
-
-            <div id="other-metal-field" class="conditional-field" hidden>
+            <div class="conditional-field" hidden="" id="other-metal-field">
               <label for="other-metal"
                 >Please specify your preferred metal *</label
               >
-              <input type="text" id="other-metal" name="otherMetal" />
+              <input id="other-metal" name="otherMetal" type="text" />
             </div>
-
             <!-- GEMSTONE PREFERENCE -->
-            <label for="gemstone-type"> Preferred Gemstone </label>
 
-            <select id="gemstone-type" name="gemstoneType">
-              <option value="" disabled selected>Select</option>
-              <option value="natural-diamond">Natural Diamond</option>
-              <option value="lab-grown-diamond">Lab-Grown Diamond</option>
-              <option value="precious-semiprecious">
-                Precious or Semiprecious Gemstone
-              </option>
-              <option value="undecided">Undecided</option>
-            </select>
-
-            <div id="other-gemstone-field" class="conditional-field" hidden>
+            <div class="conditional-field" hidden="" id="other-gemstone-field">
               <label for="other-gemstone"
                 >Please specify your preferred gemstone *</label
               >
-              <input type="text" id="other-gemstone" name="otherGemstone" />
+              <input id="other-gemstone" name="otherGemstone" type="text" />
             </div>
-
             <!-- CUSTOMER-SUPPLIED STONES -->
             <label for="customer-stones">
               Will you be providing your own gemstone(s)?
             </label>
-
             <select id="customer-stones" name="customerStones">
-              <option value="" disabled selected>Select</option>
+              <option disabled="" selected="" value="">Select</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
-
             <!-- DESIGN DESCRIPTION -->
             <label for="design-description">
               Tell Us More About Your Dream Piece *
             </label>
-
             <textarea
               id="design-description"
               name="designDescription"
-              rows="5"
               placeholder="Tell us about your ideas, inspiration, or anything you'd love us to know..."
-              required
+              required=""
+              rows="5"
             ></textarea>
-          </fieldset>
-
-          <!-- ===== SECTION 4: INSPIRATION PHOTOS ===== -->
-          <fieldset>
+            <h3 class="form-subheading">Your Inspiration</h3>
             <legend>04. Your Inspiration</legend>
-
             <p class="form-helper-text">
               Have a design in mind? Upload photos, sketches, or inspiration
               images to help us understand your vision.
             </p>
-
             <label for="inspiration-photos">
               Upload Inspiration Photos (Optional)
             </label>
-
             <input
-              type="file"
-              id="inspiration-photos"
-              name="inspirationPhotos"
               accept=".jpg,.jpeg,.png,.webp"
-              multiple
+              id="inspiration-photos"
+              multiple=""
+              name="inspirationPhotos"
+              type="file"
             />
-
             <p class="form-helper-text">
               Accepted formats: JPG, PNG, and WEBP. Maximum 5 images, 5 MB each.
             </p>
           </fieldset>
-
-          <!-- ===== SECTION 5: BUDGET & TIMELINE ===== -->
-          <fieldset>
-            <legend>05. A Few Final Details</legend>
-
+          <fieldset class="form-step" hidden="">
+            <legend>03. Your Timeline</legend>
+            <div class="form-two-columns">
+              <div class="form-column">
+                <label for="budget-range"> Approximate Budget (Optional) </label
+                ><select id="budget-range" name="budgetRange">
+                  <option disabled="" selected="" value="">Select</option>
+                  <option value="under-500">Under $500</option>
+                  <option value="500-1000">$500 - $1,000</option>
+                  <option value="1000-2500">$1,000 - $2,500</option>
+                  <option value="2500-5000">$2,500 - $5,000</option>
+                  <option value="5000-10000">$5,000 - $10,000</option>
+                  <option value="10000-plus">$10,000+</option>
+                  <option value="undecided">Undecided</option>
+                  <option value="prefer-not-to-say">Prefer Not to Say</option>
+                </select>
+              </div>
+              <div class="form-column">
+                <label for="project-timeline">
+                  When would you ideally like your piece? </label
+                ><select id="project-timeline" name="projectTimeline">
+                  <option disabled="" selected="" value="">Select</option>
+                  <option value="rush">Rush</option>
+                  <option value="standard">
+                    Standard (approximately 2–3 weeks)
+                  </option>
+                  <option value="flexible">I'm Flexible</option>
+                </select>
+              </div>
+            </div>
             <!-- BUDGET -->
-            <label for="budget-range"> Approximate Budget (Optional) </label>
-
-            <select id="budget-range" name="budgetRange">
-              <option value="" disabled selected>Select</option>
-              <option value="under-500">Under $500</option>
-              <option value="500-1000">$500 - $1,000</option>
-              <option value="1000-2500">$1,000 - $2,500</option>
-              <option value="2500-5000">$2,500 - $5,000</option>
-              <option value="5000-10000">$5,000 - $10,000</option>
-              <option value="10000-plus">$10,000+</option>
-              <option value="undecided">Undecided</option>
-              <option value="prefer-not-to-say">Prefer Not to Say</option>
-            </select>
 
             <p class="form-helper-text">
               Why we ask: Knowing your approximate budget helps us recommend
               materials and design options that align with your vision.
             </p>
-
             <!-- TIMELINE -->
-            <label for="project-timeline">
-              When would you ideally like your piece?
-            </label>
-
-            <select id="project-timeline" name="projectTimeline">
-              <option value="" disabled selected>Select</option>
-              <option value="rush">Rush</option>
-              <option value="standard">
-                Standard (approximately 2–3 weeks)
-              </option>
-              <option value="flexible">I'm Flexible</option>
-            </select>
 
             <!-- RUSH DEADLINE -->
-            <div id="rush-deadline-field" class="conditional-field" hidden>
+            <div class="conditional-field" hidden="" id="rush-deadline-field">
               <label for="rush-deadline">When do you need it by? *</label>
               <input
-                type="date"
+                disabled=""
                 id="rush-deadline"
                 name="rushDeadline"
-                disabled
+                type="date"
               />
-
               <p class="form-helper-text">
                 Rush requests are reviewed on a case-by-case basis. Availability
                 and any additional fees will be discussed before confirming your
                 timeline.
               </p>
             </div>
-
             <!-- HOW DID YOU HEAR ABOUT US? -->
             <label for="referral-source">How Did You Hear About Us?</label>
-
             <select id="referral-source" name="referralSource">
-              <option value="" disabled selected>Select</option>
+              <option disabled="" selected="" value="">Select</option>
               <option value="friend">Friend</option>
               <option value="social-media">Social Media</option>
               <option value="event">Event</option>
               <option value="other">Other</option>
             </select>
-
-            <div id="other-referral-field" class="conditional-field" hidden>
+            <div class="conditional-field" hidden="" id="other-referral-field">
               <label for="other-referral">Please specify *</label>
               <input
-                type="text"
+                disabled=""
                 id="other-referral"
                 name="otherReferral"
-                disabled
+                type="text"
               />
             </div>
-
             <!-- ADDITIONAL NOTES -->
             <label for="additional-notes">
               Anything Else We Should Know? (Optional)
             </label>
-
             <textarea
               id="additional-notes"
               name="additionalNotes"
-              rows="4"
               placeholder="Special occasions, meaningful details, questions, or anything else..."
+              rows="4"
             ></textarea>
           </fieldset>
 
-          <!-- ===== ESTIMATE & TIMELINE DISCLAIMERS ===== -->
-          <div class="estimate-disclaimer">
-            <p><strong>A Note About Estimates</strong></p>
+          <!-- STEP 4: CONTACT INFORMATION -->
+          <fieldset class="form-step" hidden>
+            <legend>04. Let's Connect</legend>
 
-            <p>
-              All inquiries are reviewed individually. Any pricing discussed is
-              preliminary and may change based on materials, gemstone
-              availability, design specifications, and other factors. Final
-              pricing will be confirmed before proceeding.
-            </p>
+            <!-- Full Name -->
+            <label for="customer-name">Full Name *</label>
+            <input
+              type="text"
+              id="customer-name"
+              name="customerName"
+              autocomplete="name"
+              required
+            />
 
-            <br />
+            <!-- Phone and Email -->
+            <div class="form-two-columns">
+              <div class="form-column">
+                <label for="customer-phone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="customer-phone"
+                  name="customerPhone"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
 
-            <p><strong>A Note About Timelines</strong></p>
+              <div class="form-column">
+                <label for="customer-email">Email Address *</label>
+                <input
+                  type="email"
+                  id="customer-email"
+                  name="customerEmail"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
 
-            <p>
-              We make every effort to accommodate requested timelines and
-              deadlines. Standard turnaround time is approximately 2–3 weeks;
-              however, completion times may vary based on design complexity,
-              materials, and availability.
-            </p>
-
-            <p>
-              Rush requests are reviewed on a case-by-case basis, subject to
-              approval, and may incur additional fees. All timelines are
-              estimates and are not guaranteed unless expressly confirmed by
-              Jewels With Jazz.
-            </p>
+            <div class="estimate-disclaimer">
+              <p><strong>A Note About Estimates</strong></p>
+              <p>
+                All inquiries are reviewed individually. Any pricing discussed
+                is preliminary and may change based on materials, gemstone
+                availability, design specifications, and other factors. Final
+                pricing will be confirmed before proceeding.
+              </p>
+              <br />
+              <p><strong>A Note About Timelines</strong></p>
+              <p>
+                We make every effort to accommodate requested timelines and
+                deadlines. Standard turnaround time is approximately 2–3 weeks;
+                however, completion times may vary based on design complexity,
+                materials, and availability.
+              </p>
+              <p>
+                Rush requests are reviewed on a case-by-case basis, subject to
+                approval, and may incur additional fees. All timelines are
+                estimates and are not guaranteed unless expressly confirmed by
+                Jewels With Jazz.
+              </p>
+            </div>
+          </fieldset>
+          <div class="form-navigation">
+            <button hidden="" id="form-back" type="button">Back</button
+            ><button id="form-next" type="button">
+              Next <span aria-hidden="true">→</span></button
+            ><button hidden="" type="submit">Submit My Inquiry</button>
           </div>
-
-          <!-- ===== SUBMIT BUTTON ===== -->
-          <button type="submit">Submit My Inquiry</button>
         </form>
       </section>
     </main>
-
     <!-- ===== FOOTER ===== -->
     <footer>
       <div class="footer-socials">
         <p>Follow Along</p>
-
         <a
           href="https://www.instagram.com/jewelswithjazz/"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >
-          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <i aria-hidden="true" class="fa-brands fa-instagram"></i>
           Instagram
         </a>
-
         <a
           href="https://www.tiktok.com/@jewels.with.jazz"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >
-          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+          <i aria-hidden="true" class="fa-brands fa-tiktok"></i>
           TikTok
         </a>
       </div>
-
-      <p>&copy; 2026 Jewels With Jazz</p>
+      <p>© 2026 Jewels With Jazz</p>
     </footer>
-
     <!-- ===== JAVASCRIPT ===== -->
     <script src="script.js"></script>
   </body>
