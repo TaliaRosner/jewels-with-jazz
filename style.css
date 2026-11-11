@@ -504,7 +504,7 @@ footer p {
 
 .site-logo {
     display: block;
-    width: 380px;
+    width: 500px;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
@@ -512,7 +512,7 @@ footer p {
 
 @media (max-width: 768px) {
     .site-logo {
-        width: 300px;
+        width: 350px;
     }
 }
 /* ========================================
