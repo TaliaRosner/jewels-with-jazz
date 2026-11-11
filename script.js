@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     ring: document.getElementById("ring-options"),
     necklace: document.getElementById("necklace-options"),
     earrings: document.getElementById("earring-options"),
+    bracelet: document.getElementById("bracelet-options"),
+    redesign: document.getElementById("redesign-options"),
   };
 
   function updateJewelryFields() {
@@ -101,6 +103,16 @@ document.addEventListener("DOMContentLoaded", function () {
       selectId: "jewelry-type",
       fieldId: "other-jewelry-type-field",
       inputId: "other-jewelry-type",
+    },
+    {
+      selectId: "bracelet-style",
+      fieldId: "other-bracelet-style-field",
+      inputId: "other-bracelet-style",
+    },
+    {
+      selectId: "bracelet-size",
+      fieldId: "other-bracelet-size-field",
+      inputId: "other-bracelet-size",
     },
   ];
 

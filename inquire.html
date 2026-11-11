@@ -191,6 +191,82 @@
                 />
               </div>
             </div>
+
+            <!-- Bracelet Options -->
+            <div id="bracelet-options" class="conditional-field" hidden>
+              <label for="bracelet-style">Bracelet Style</label>
+              <select id="bracelet-style" name="braceletStyle">
+                <option value="" disabled selected>Select</option>
+                <option value="bangle">Bangle</option>
+                <option value="chain">Chain Bracelet</option>
+                <option value="tennis">Tennis Bracelet</option>
+                <option value="charm">Charm Bracelet</option>
+                <option value="other">Other</option>
+              </select>
+
+              <div
+                id="other-bracelet-style-field"
+                class="conditional-field"
+                hidden
+              >
+                <label for="other-bracelet-style">Please specify *</label>
+                <input
+                  type="text"
+                  id="other-bracelet-style"
+                  name="otherBraceletStyle"
+                />
+              </div>
+
+              <label for="bracelet-size">Wrist Size / Bracelet Length</label>
+              <select id="bracelet-size" name="braceletSize">
+                <option value="" disabled selected>Select</option>
+                <option value="6">6 inches</option>
+                <option value="6.5">6.5 inches</option>
+                <option value="7">7 inches</option>
+                <option value="7.5">7.5 inches</option>
+                <option value="8">8 inches</option>
+                <option value="undecided">Undecided</option>
+                <option value="other">Other</option>
+              </select>
+
+              <div
+                id="other-bracelet-size-field"
+                class="conditional-field"
+                hidden
+              >
+                <label for="other-bracelet-size"
+                  >Please specify your size *</label
+                >
+                <input
+                  type="text"
+                  id="other-bracelet-size"
+                  name="otherBraceletSize"
+                />
+              </div>
+            </div>
+
+            <!-- Heirloom Redesign Options -->
+            <div id="redesign-options" class="conditional-field" hidden>
+              <label for="redesign-piece">What are you redesigning?</label>
+              <select id="redesign-piece" name="redesignPiece">
+                <option value="" disabled selected>Select</option>
+                <option value="ring">Ring</option>
+                <option value="necklace">Necklace / Pendant</option>
+                <option value="earrings">Earrings</option>
+                <option value="bracelet">Bracelet</option>
+                <option value="other">Other</option>
+              </select>
+
+              <label for="redesign-details"
+                >What would you like to change?</label
+              >
+              <textarea
+                id="redesign-details"
+                name="redesignDetails"
+                rows="3"
+                placeholder="Tell us about your vision..."
+              ></textarea>
+            </div>
           </fieldset>
 
           <!-- ===== SECTION 3: DESIGN PREFERENCES ===== -->
