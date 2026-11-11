@@ -54,6 +54,7 @@ header {
     text-align: center;
     padding: 30px 20px;
     border-bottom: 1px solid var(--gold);
+    background-color: #EDE7DE;
 }
 
 header h1 {
@@ -70,7 +71,8 @@ nav {
 nav a {
     text-decoration: none;
     color: var(--charcoal);
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: color 0.3s ease;
@@ -89,15 +91,23 @@ nav a:hover {
     background-color: var(--ivory);
 }
 
+.hero-diamond {
+    color: #B69A62;
+    font-size: 28px;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
 #home h2 {
     font-size: 64px;
     font-weight: 400;
+    margin-top: 10px;
     margin-bottom: 15px;
 }
 
 #home p {
-    font-size: 16px;
-    letter-spacing: 2px;
+    font-size: 20px;
+    letter-spacing: 1px;
     margin-bottom: 35px;
 }
 
@@ -499,7 +509,7 @@ footer p {
 
 .logo-link {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .site-logo {
