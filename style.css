@@ -84,6 +84,11 @@ nav a:hover {
     border-bottom-color: var(--gold);
 }
 
+nav a.active {
+    color: var(--emerald);
+    border-bottom: 2px solid var(--gold);
+}
+
 nav a.nav-inquire {
     background-color: var(--gold);
     color: white;
@@ -96,6 +101,10 @@ nav a.nav-inquire {
 nav a.nav-inquire:hover {
     background-color: #947A49;
     color: white;
+}
+
+nav a.nav-inquire.active {
+    background-color: #947A49;
 }
 
 /* ===== HOMEPAGE HERO: SPLIT EDITORIAL LAYOUT ===== */
