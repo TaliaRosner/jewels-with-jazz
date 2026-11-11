@@ -784,3 +784,54 @@ footer > p {
     nav { gap: 12px; }
     nav a { font-size: 11px; letter-spacing: 1px; }
 }
+
+/* ===== OUR PROCESS PAGE ===== */
+
+#process-page {
+    background-color: var(--ivory);
+    text-align: center;
+    padding: 90px 20px;
+    min-height: 65vh;
+}
+
+#process-page h1 {
+    font-size: clamp(38px, 5vw, 58px);
+    color: var(--charcoal);
+    margin-bottom: 15px;
+}
+
+#process-page > p {
+    font-size: 17px;
+    color: var(--charcoal);
+}
+
+.process-placeholder {
+    max-width: 700px;
+    margin: 55px auto;
+    padding: 50px 35px;
+    background-color: var(--soft-beige);
+    border: 1px solid var(--gold);
+}
+
+.process-placeholder h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.process-placeholder p {
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.process-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: var(--emerald);
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.process-button:hover {
+    background-color: #10543E;
+}
