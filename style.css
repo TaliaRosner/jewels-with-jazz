@@ -581,7 +581,7 @@ footer > p {
 }
 
 .estimate-disclaimer p {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.8;
     color: var(--charcoal);
     margin: 0 0 10px;
@@ -843,4 +843,29 @@ footer > p {
 
 .process-button:hover {
     background-color: #10543E;
+}
+
+/* Inquiry Form Typography */
+
+#jewelry-inquiry-form label {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#jewelry-inquiry-form input,
+#jewelry-inquiry-form select,
+#jewelry-inquiry-form textarea {
+  font-size: 16px;
+}
+
+#jewelry-inquiry-form small,
+#jewelry-inquiry-form .helper-text {
+  font-size: 14px;
+}
+
+#jewelry-inquiry-form .estimate-disclaimer p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--charcoal);
+    margin: 0 0 10px;
 }
